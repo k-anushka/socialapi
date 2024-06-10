@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DJANGO_SUPERUSER_USERNAME: anushka
+      DJANGO_SUPERUSER_EMAIL: anushka@mail.com
+      DJANGO_SUPERUSER_PASSWORD: 123
+
+  db:
+    image: mysql:8
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: socialnetwork
+      MYSQL_USER: user123
+      MYSQL_PASSWORD: User@123
+      MYSQL_ROOT_PASSWORD: root@123
+
+volumes:
+  mysql_data:
