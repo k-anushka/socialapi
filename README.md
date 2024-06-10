@@ -26,4 +26,13 @@ This project is a social networking API built with Django and Django Rest Framew
 1. Clone the repository:
 
    git clone  https://github.com/k-anushka/socialapi.git
+   
    cd socialapi
+
+3. Run the project:
+
+     a. python manage.py makemigrations
+     
+     b. python manage.py migrate
+     
+     c. python manage.py runserver
