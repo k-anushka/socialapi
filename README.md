@@ -37,4 +37,8 @@ This project is a social networking API built with Django and Django Rest Framew
      
      c. python manage.py runserver
 
+4. Docker command:
+
+      docker-compose up --build
+
 
